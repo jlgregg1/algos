@@ -1,0 +1,16 @@
+# hackerrank - data structures - simple text editor
+q = int(input())
+log = ['']
+for i in range (0, q):
+    inp = input().split()
+    if inp[0] == "1":
+        log.append(log[-1] + inp[1])
+    elif inp[0] == "2":
+        r = int(inp[1])
+        log.append(log[-1][:-r])
+    elif inp[0] == "3":
+        k = int(inp[1])
+        l = log[-1]
+        print(l[k-1])
+    else:
+        log.pop()
